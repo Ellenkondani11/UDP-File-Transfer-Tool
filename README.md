@@ -1,0 +1,2 @@
+The file transfer tool will be used in cross transferring through UDP socket.
+This application will help multiple devices to share file seamlessly using the UDP networking protocol over local networks.
