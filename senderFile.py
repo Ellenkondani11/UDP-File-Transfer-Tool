@@ -21,13 +21,12 @@ def send_file(file_path):
         return
 
     sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-    sock.settimeout(TIMEOUT)  # Set a timeout for receiving ACKs
+    sock.settimeout(TIMEOUT)
 
     file_name = os.path.basename(file_path)
     file_size = os.path.getsize(file_path)
 
-    # Calculate total chunks needed
-    # ceil(file_size / CHUNK_SIZE)
+
     total_chunks = (file_size + CHUNK_SIZE - 1) // CHUNK_SIZE
 
     print(f"File: '{file_name}', Size: {file_size} bytes, Chunks: {total_chunks}")
