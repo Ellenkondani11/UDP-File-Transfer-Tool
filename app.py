@@ -87,7 +87,7 @@ class FileTransferFrame(wx.Frame):
 
         self.main_sizer.Add(receiver_sizer, 0, wx.EXPAND | wx.ALL, 10)
 
-
+#creating the status log section
         status_static_box = wx.StaticBox(self.panel, label="Status Log")
         status_sizer = wx.StaticBoxSizer(status_static_box, wx.VERTICAL)
         self.status_log = wx.TextCtrl(self.panel, style=wx.TE_MULTILINE | wx.TE_READONLY | wx.HSCROLL)
@@ -108,7 +108,7 @@ class FileTransferFrame(wx.Frame):
         self.receiver_thread = None
         self.sender_thread = None
 
-    # this function will be triggered when the user clicks on Browse... button
+# this function will be triggered when the user clicks on Browse... button
     def on_browse_file(self, event):
         wildcard = "All files (*.*)|*.*"
         dialog = wx.FileDialog(self, "Choose a file", os.getcwd(), "", wildcard, wx.FD_OPEN | wx.FD_FILE_MUST_EXIST)
@@ -116,7 +116,7 @@ class FileTransferFrame(wx.Frame):
             self.file_path_text.SetValue(dialog.GetPath())
         dialog.Destroy()
 
-    # this function will be triggered when the user clicks on send file button
+# this function will be triggered when the user clicks on send file button
     def on_send_file(self, event):
         file_path = self.file_path_text.GetValue()
         receiver_ip = self.receiver_ip_text.GetValue()
