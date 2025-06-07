@@ -68,7 +68,7 @@ class FileTransferFrame(wx.Frame):
 
         self.main_sizer.Add(sender_sizer, 0, wx.EXPAND | wx.ALL, 10)
 
-
+#creating the reciever section
         receiver_static_box = wx.StaticBox(self.panel, label="Receiver")
         receiver_sizer = wx.StaticBoxSizer(receiver_static_box, wx.VERTICAL)
 
