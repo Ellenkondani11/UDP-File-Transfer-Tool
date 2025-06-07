@@ -61,7 +61,7 @@ class FileTransferFrame(wx.Frame):
         receiver_info_sizer.Add(self.receiver_port_text, 0)
         sender_sizer.Add(receiver_info_sizer, 0, wx.EXPAND | wx.ALL, 5)
 
-
+#creating the send button and binding it to on_send function
         self.send_button = wx.Button(self.panel, label="Send File")
         self.send_button.Bind(wx.EVT_BUTTON, self.on_send_file)
         sender_sizer.Add(self.send_button, 0, wx.ALIGN_CENTER | wx.ALL, 10)
