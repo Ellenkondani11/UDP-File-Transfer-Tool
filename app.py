@@ -108,7 +108,7 @@ class FileTransferFrame(wx.Frame):
         self.receiver_thread = None
         self.sender_thread = None
 
-
+    # this function will be triggered when the user clicks on Browse... button
     def on_browse_file(self, event):
         wildcard = "All files (*.*)|*.*"
         dialog = wx.FileDialog(self, "Choose a file", os.getcwd(), "", wildcard, wx.FD_OPEN | wx.FD_FILE_MUST_EXIST)
