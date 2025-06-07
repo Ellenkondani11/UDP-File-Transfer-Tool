@@ -35,7 +35,7 @@ class FileTransferFrame(wx.Frame):
         self.panel = wx.Panel(self)
         self.main_sizer = wx.BoxSizer(wx.VERTICAL)
 
-
+#creating the sender section
         sender_static_box = wx.StaticBox(self.panel, label="Sender")
         sender_sizer = wx.StaticBoxSizer(sender_static_box, wx.VERTICAL)
 
@@ -72,7 +72,7 @@ class FileTransferFrame(wx.Frame):
         receiver_static_box = wx.StaticBox(self.panel, label="Receiver")
         receiver_sizer = wx.StaticBoxSizer(receiver_static_box, wx.VERTICAL)
 
-        # Receiver Port
+
         receiver_listen_port_sizer = wx.BoxSizer(wx.HORIZONTAL)
         receiver_listen_port_sizer.Add(wx.StaticText(self.panel, label="Listen Port:"), 0,
                                        wx.ALIGN_CENTER_VERTICAL | wx.RIGHT, 5)
