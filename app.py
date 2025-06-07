@@ -27,7 +27,7 @@ class UpdateStatusEvent(wx.PyEvent):
         wx.PyEvent.__init__(self, myEVT_UPDATE_STATUS_ID)
         self.data = data
 
-
+#creating a class for our main frame of the app
 class FileTransferFrame(wx.Frame):
     def __init__(self, parent, title):
         super(FileTransferFrame, self).__init__(parent, title=title, size=(800, 600))
