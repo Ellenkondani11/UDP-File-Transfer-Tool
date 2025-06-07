@@ -33,7 +33,7 @@ class FileTransferFrame(wx.Frame):
         super(FileTransferFrame, self).__init__(parent, title=title, size=(800, 600))
 
         self.panel = wx.Panel(self)
-        self.main_sizer = wx.BoxSizer(wx.VERTICAL)
+        self.main_sizer = wx.BoxSizer(wx.VERTICAL)#this will be used as the main sizer of the app
 
 #creating the sender section
         sender_static_box = wx.StaticBox(self.panel, label="Sender")
