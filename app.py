@@ -262,6 +262,7 @@ class FileTransferFrame(wx.Frame):
         wx.CallAfter(self.send_button.Enable)
 
 
+#this function will be used as the start receiver thread
     def _start_receiver_thread(self, listen_port):
         sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
         try:
