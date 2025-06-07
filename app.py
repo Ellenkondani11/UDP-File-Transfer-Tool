@@ -50,7 +50,7 @@ class FileTransferFrame(wx.Frame):
         file_selection_sizer.Add(browse_button, 0, wx.ALIGN_CENTER_VERTICAL)
         sender_sizer.Add(file_selection_sizer, 0, wx.EXPAND | wx.ALL, 5)
 
-
+#creating the receiver section
         receiver_info_sizer = wx.BoxSizer(wx.HORIZONTAL)
         receiver_info_sizer.Add(wx.StaticText(self.panel, label="Receiver IP:"), 0, wx.ALIGN_CENTER_VERTICAL | wx.RIGHT,
                                 5)
