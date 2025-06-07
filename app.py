@@ -169,6 +169,7 @@ class FileTransferFrame(wx.Frame):
         wx.PostEvent(self, evt)
 
 
+#this function will be used as the send file thread
     def _send_file_thread(self, file_path, receiver_ip, receiver_port):
         sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
         sock.settimeout(TIMEOUT)
