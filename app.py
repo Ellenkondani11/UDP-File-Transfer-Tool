@@ -108,6 +108,7 @@ class FileTransferFrame(wx.Frame):
         self.receiver_thread = None
         self.sender_thread = None
 
+
     def on_browse_file(self, event):
         wildcard = "All files (*.*)|*.*"
         dialog = wx.FileDialog(self, "Choose a file", os.getcwd(), "", wildcard, wx.FD_OPEN | wx.FD_FILE_MUST_EXIST)
@@ -115,6 +116,7 @@ class FileTransferFrame(wx.Frame):
             self.file_path_text.SetValue(dialog.GetPath())
         dialog.Destroy()
 
+    # this function will be triggered when the user clicks on send file button
     def on_send_file(self, event):
         file_path = self.file_path_text.GetValue()
         receiver_ip = self.receiver_ip_text.GetValue()
@@ -162,6 +164,7 @@ class FileTransferFrame(wx.Frame):
         self.status_log.AppendText(event.data + "\n")
 
         self.status_log.ShowPosition(self.status_log.GetLastPosition())
+
 
     def update_status(self, message):
 
